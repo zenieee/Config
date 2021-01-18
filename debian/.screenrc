@@ -1,0 +1,25 @@
+# shell -$SHELL
+shell /bin/bash
+startup_message off
+defscrollback 10000
+ignorecase on
+autodetach on
+vbell on
+vbell_msg "   Wuff  ----  Wuff!!  "
+hardstatus on
+hardstatus alwayslastline
+hardstatus string '%{= kG}[%{G}%H][%=%{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%=%{g}][%{B}%Y-%m-%d %D %{W}%c]'
+
+# termcapinfo xterm 'hs:ts=\E]2;:fs=07:ds=\E]2;screen07'hardstatus string"[screen %n%?: %t%?] %h"
+termcap  xterm 'XT:AF=\E[3%dm:AB=\E[4%dm:AX'
+terminfo xterm 'XT:AF=\E[3%p1%dm:AB=\E[4%p1%dm:AX'
+termcapinfo xterm 'XT:AF=\E[3%p1%dm:AB=\E[4%p1%dm:AX:hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+termcap  xtermc 'XT:AF=\E[3%dm:AB=\E[4%dm:AX'
+terminfo xtermc 'XT:AF=\E[3%p1%dm:AB=\E[4%p1%dm:AX'
+termcapinfo xtermc 'XT:AF=\E[3%p1%dm:AB=\E[4%p1%dm:AX:hs:ts=\E]2;:fs=\007:ds=\E]2;screen\007'
+
+
+# GNU Screen: can also be used on a serial console:
+# vscreen <device> <baudrate>
+# Example:
+# screen /dev/ttyS0 115200
